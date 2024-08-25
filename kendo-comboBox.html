@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <input id="combobox" />
+
+    <script>
+      $(document).ready(function () {
+        $("#combobox").kendoComboBox({
+          dataSource: ["Red", "Green", "Blue", "Yellow"],
+          placeholder: "Bir renk seçin...",
+          filter: "contains",
+          suggest: true,
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoComboBox: Kullanıcıların metin girmesine ve listeden seçim yapmasına izin veren bir birleşik giriş kutusu sağlar.
+
+-->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="grid"></div>
+
+    <script>
+      $(document).ready(function () {
+        var dataSource = new kendo.data.DataSource({
+          data: [
+            { id: 1, name: "John", age: 30 },
+            { id: 2, name: "Jane", age: 25 },
+            { id: 3, name: "Doe", age: 40 },
+            { id: 1, name: "John", age: 30 },
+            { id: 2, name: "Jane", age: 25 },
+            { id: 3, name: "Doe", age: 40 },
+          ],
+          schema: {
+            model: {
+              fields: {
+                id: { type: "number" },
+                name: { type: "string" },
+                age: { type: "number" },
+              },
+            },
+          },
+        });
+
+        $("#grid").kendoGrid({
+          dataSource: dataSource,
+          columns: [
+            { field: "id", title: "ID" },
+            { field: "name", title: "İsim" },
+            { field: "age", title: "Yaş" },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoDataSource: Veri yönetimi için kullanılır; verileri almak, sıralamak, filtrelemek ve sayfalamak için veri kaynağı sağlar.
+-->

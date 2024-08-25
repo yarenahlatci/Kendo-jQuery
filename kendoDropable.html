@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+    <style>
+      .droppable {
+        width: 150px;
+        height: 150px;
+        border: 2px dashed #2196f3;
+        margin: 20px;
+        display: inline-block;
+        text-align: center;
+        line-height: 150px;
+        color: #2196f3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="droppable">Beni Buraya Bırak</div>
+
+    <div class="draggable">Sürükle Beni</div>
+
+    <script>
+      $(document).ready(function () {
+        $(".draggable").kendoDraggable();
+        $(".droppable").kendoDroppable({
+          drop: function (e) {
+            alert("Öğe bırakıldı!");
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+
+kendoDraggable: Elemanları sayfa üzerinde sürüklemeye izin verir.
+
+kendoDroppable: Sürüklenen öğeleri bırakmak için hedef alanlar oluşturur.
+-->

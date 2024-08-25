@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <ul id="menu">
+      <li>
+        Dosya
+        <ul>
+          <li>Yeni</li>
+          <li>Aç</li>
+          <li>Kaydet</li>
+        </ul>
+      </li>
+      <li>
+        Düzen
+        <ul>
+          <li>Kopyala</li>
+          <li>Yapıştır</li>
+          <li>Kes</li>
+        </ul>
+      </li>
+    </ul>
+    <script>
+      $(document).ready(function () {
+        $("#menu").kendoMenu();
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoMenu: Çok seviyeli menü yapıları oluşturur, navigasyon veya seçenekler sunar.
+-->

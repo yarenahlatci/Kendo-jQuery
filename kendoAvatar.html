@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+    <style>
+      .k-avatar {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-size: 20px;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="avatar-container"></div>
+
+    <script>
+      $(document).ready(function () {
+        // Avatar verileri
+        var avatars = [
+          { text: "A", color: "#FF5733", initials: "AB" },
+          { text: "B", color: "#33FF57", initials: "BC" },
+          { text: "C", color: "#3357FF", initials: "CD" },
+        ];
+
+        // Avatarları oluştur
+        avatars.forEach(function (avatar, index) {
+          $("#avatar-container").append(`
+            <div class="k-avatar" style="background-color: ${avatar.color};">
+                <span>${avatar.initials}</span>
+            </div>
+        `);
+        });
+
+        // Kendo Avatar özelleştirmeleri (isteğe bağlı)
+        $(".k-avatar").kendoAvatar();
+      });
+    </script>
+  </body>
+</html>

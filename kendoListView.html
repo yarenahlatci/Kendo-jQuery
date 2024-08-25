@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+    <style>
+      #listView {
+        width: 300px;
+        margin: 0 auto;
+      }
+      .k-listview-item {
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="listView"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#listView").kendoListView({
+          dataSource: [
+            { Name: "Anna", Age: 28 },
+            { Name: "Mike", Age: 32 },
+            { Name: "Sara", Age: 24 },
+            { Name: "Tom", Age: 40 },
+          ],
+          template: "<div class='k-listview-item'>#= Name # - #= Age #</div>",
+        });
+      });
+    </script>
+  </body>
+</html>
+<!-- kendoListView: Liste verilerini özel bir düzenle görüntülemek için kullanılır; grid’den daha basit ve esnektir. -->

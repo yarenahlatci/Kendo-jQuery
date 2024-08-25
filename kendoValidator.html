@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <form id="form">
+      <label for="name">Adınız:</label>
+      <input
+        id="name"
+        name="name"
+        required
+        validationMessage="Bu alan zorunludur."
+      />
+
+      <button type="submit">Gönder</button>
+    </form>
+    <script>
+      $(document).ready(function () {
+        $("#form").kendoValidator().data("kendoValidator");
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoValidator: Form doğrulama kurallarını uygulayan ve kullanıcı girdilerini kontrol eden bir doğrulama bileşeni sağlar.
+-->

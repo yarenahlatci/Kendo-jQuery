@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+    <style>
+      #imageEditor {
+        width: 100%;
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="imageEditor"></div>
+
+    <script>
+      $(document).ready(function () {
+        var imageEditor = $("#imageEditor")
+          .kendoImageEditor({
+            imageUrl:
+              "https://rare-gallery.com/mocahbig/396498-wallpaper-cod-mobile-season-2-battle-pass-skins.jpg", // Örnek resim URL'si
+          })
+          .data("kendoImageEditor");
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoImageEditor: Görselleri düzenlemek ve çeşitli görsel efektler uygulamak için kullanılan bir görüntü düzenleyici sağlar.
+-->

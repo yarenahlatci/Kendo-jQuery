@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+    <style>
+      #drawer {
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="drawer">
+      <ul>
+        <li><a href="#">Ana Sayfa</a></li>
+        <li><a href="#">Hakkımızda</a></li>
+        <li><a href="#">İletişim</a></li>
+      </ul>
+    </div>
+    <div id="content">
+      <button id="toggleDrawer">Menüyü Aç/Kapat</button>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var drawer = $("#drawer").kendoDrawer().data("kendoDrawer");
+
+        $("#toggleDrawer").click(function () {
+          drawer.toggle();
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoDrawer: Yan panel veya çekmece menüsü oluşturur, navigasyon için kullanılabilir.
+
+-->

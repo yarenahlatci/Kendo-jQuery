@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="chart"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#chart").kendoChart({
+          title: {
+            text: "Aylık Satış Verileri",
+          },
+          series: [
+            {
+              name: "Satış",
+              data: [5, 10, 15, 20, 25, 30],
+              type: "line",
+            },
+          ],
+          categoryAxis: {
+            categories: ["Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran"],
+          },
+          valueAxis: {
+            title: {
+              text: "Satış Miktarı",
+            },
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoChart: Çeşitli grafik türlerini (çizgi, çubuk, pasta vb.) görüntülemek için kullanılır.
+-->

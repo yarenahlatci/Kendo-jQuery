@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="splitter">
+      <div class="k-pane" style="width: 200px">Sol Panel
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam libero iure fugit corporis et ullam.</p>
+      </div>
+      <div class="k-pane">Orta Panel
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure tenetur ullam itaque id, quas ipsum?</p>
+      </div>
+      <div class="k-pane" style="width: 200px">Sağ Panel
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores officia aliquid sit voluptatibus quasi deleniti?</p>
+      </div>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#splitter").kendoSplitter({
+          panes: [
+            { collapsible: true, size: "200px" },
+            { collapsible: false },
+            { collapsible: true, size: "200px" },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoSplitter: Sayfa içeriğini bölümlere ayırarak, kullanıcıların bu bölümleri genişletip daraltmasına olanak tanıyan bir bölücü sağlar.
+-->

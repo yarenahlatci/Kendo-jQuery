@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+    <style>
+      #stepWizard {
+        width: 500px;
+        margin: 0 auto;
+      }
+      .k-step {
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="example">
+        <div class="demo-section wide">
+            <nav id="stepper"></nav>
+        </div>
+    <script>
+   $(document).ready(function () {
+            $("#stepper").kendoStepper({
+                linear:false,
+                steps: [{
+                    label: "Personal Info",
+                    icon:"user"
+                },{
+                    label: "Education",
+                    icon:"book",
+                    error: true
+                },{
+                    label: "Experience",
+                    icon:"flip-vertical",
+                    selected: true
+                },{
+                    label: "Attachments",
+                    icon: "paperclip"
+                },{
+                    label: "Review",
+                    icon:"eye",
+                    enabled: false
+                },{
+                    label: "Submit",
+                    icon: "file-add"
+                }]
+            });
+        });
+    </script>
+  </body>
+</html>
+<!-- kendoStepper: Adım tabanlı formlar veya süreçler için adımları gösteren bir bileşen sunar. -->

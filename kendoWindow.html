@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <button id="openWindow">Pencereyi Aç</button>
+    <div id="window" style="display: none">
+      <p>Hello World!</p>
+    </div>
+    <script>
+      $(document).ready(function () {
+        var myWindow = $("#window")
+          .kendoWindow({
+            width: "500px",
+            title: "Kendo Window",
+            visible: false,
+            actions: ["Pin", "Minimize", "Maximize", "Close"],
+          })
+          .data("kendoWindow");
+
+        $("#openWindow").click(function () {
+          myWindow.center().open();
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoWindow: Açılır pencereler (modaller) oluşturur; diyaloglar, bildirimler veya kullanıcı etkileşimleri için kullanılır.
+
+Yapı: kendoWindow fonksiyonu, pencere genişliği, başlık ve eylemler gibi çeşitli seçeneklerle yapılandırılır.
+-->

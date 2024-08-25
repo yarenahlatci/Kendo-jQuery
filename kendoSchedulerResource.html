@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+    <style>
+      #scheduler {
+        width: 100%;
+        height: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="scheduler"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#scheduler").kendoScheduler({
+          date: new Date(),
+          views: ["day", "week", "month"],
+          dataSource: {
+            data: [
+              {
+                id: 1,
+                start: new Date(),
+                end: new Date(new Date().getTime() + 60 * 60 * 1000),
+                title: "Toplantı",
+                roomId: 1,
+              },
+            ],
+            schema: {
+              model: {
+                fields: {
+                  id: { from: "id", type: "number" },
+                  start: { from: "start", type: "date" },
+                  end: { from: "end", type: "date" },
+                  title: { from: "title", defaultValue: "" },
+                },
+              },
+            },
+          },
+          resources: [
+            {
+              field: "roomId",
+              title: "Oda",
+              dataSource: [
+                { text: "Oda 1", value: 1 },
+                { text: "Oda 2", value: 2 },
+              ],
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
+<!-- kendoSchedulerResource: Scheduler bileşeni içinde kaynak yönetimini sağlar, farklı kaynak türlerini (örneğin, odalar, ekipmanlar) tanımlar. -->

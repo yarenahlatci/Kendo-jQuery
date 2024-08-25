@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <input id="autocomplete" />
+
+    <script>
+      $(document).ready(function () {
+        $("#autocomplete").kendoAutoComplete({
+          dataSource: [
+            "Apple",
+            "Banana",
+            "Cherry",
+            "Date",
+            "Fig",
+            "Grape",
+            "Kiwi",
+          ],
+          placeholder: "Bir meyve girin...",
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoAutoComplete: Kullanıcıların metin girdisine dayalı öneriler aldığı otomatik tamamlama bileşeni.
+-->

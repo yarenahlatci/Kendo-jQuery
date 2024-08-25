@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="panelbar">
+      <ul>
+        <li>
+          Panel 1
+          <ul>
+            <li>İçerik 1</li>
+            <li>İçerik 2</li>
+          </ul>
+        </li>
+        <li>
+          Panel 2
+          <ul>
+            <li>İçerik A</li>
+            <li>İçerik B</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#panelbar").kendoPanelBar();
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoPanelBar: Genişletilebilir ve daraltılabilir panel listeleri oluşturur.
+-->

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="grid"></div>
+
+    <script> //dataSource ile veriler sağlanır
+      $(document).ready(function () {
+        $("#grid").kendoGrid({
+          dataSource: {
+            data: [
+              { ProductName: "Tea", Category: "Beverages", Price: 10 },
+              { ProductName: "Coffee", Category: "Beverages", Price: 15 },
+              { ProductName: "Soda", Category: "Beverages", Price: 5 },
+            ],
+            pageSize: 5,
+          },
+          pageable: true,
+          sortable: true,
+          filterable: true,
+          columns: [
+            { field: "ProductName", title: "Ürün Adı" },
+            { field: "Category", title: "Kategori" },
+            { field: "Price", title: "Fiyat", format: "{0:c}" },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoGrid: Tablo benzeri bir yapı oluşturur ve verileri sayfalama, sıralama, filtreleme gibi özelliklerle görüntüler.
+
+Yapı: dataSource ile veriler sağlanır ve grid bileşeni çeşitli sütunlar tanımlanarak yapılandırılır.
+-->

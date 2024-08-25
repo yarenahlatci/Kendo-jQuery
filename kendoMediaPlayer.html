@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="mediaPlayer"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#mediaPlayer").kendoMediaPlayer({
+          sources: [
+            { type: "video/mp4", src: "https://www.example.com/sample.mp4" },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoMediaPlayer: Ses ve video oynatma işlevleri sunan bir medya oynatıcı bileşeni sağlar.
+
+-->

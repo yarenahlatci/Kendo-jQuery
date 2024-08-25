@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <button id="tooltipButton">Üzerine Gelin</button>
+
+    <script>
+      $(document).ready(function () {
+        $("#tooltipButton").kendoTooltip({
+          content: "Bu bir tooltip mesajıdır.",
+          position: "top",
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoTooltip: Bir öğenin üzerine gelindiğinde bilgi göstermek için kullanılır.
+-->

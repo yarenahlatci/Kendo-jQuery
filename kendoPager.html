@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="grid"></div>
+    <div id="pager"></div>
+
+    <script>
+      $(document).ready(function () {
+        var dataSource = new kendo.data.DataSource({
+          pageSize: 5,
+          data: [
+            { Name: "John", Age: 30 },
+            { Name: "Jane", Age: 25 },
+            { Name: "Paul", Age: 35 },
+            { Name: "Anna", Age: 28 },
+            { Name: "Mike", Age: 32 },
+            { Name: "Sara", Age: 24 },
+            { Name: "Tom", Age: 40 },
+          ],
+          schema: {
+            model: {
+              fields: {
+                Name: { type: "string" },
+                Age: { type: "number" },
+              },
+            },
+          },
+          page: 1,
+        });
+
+        $("#grid").kendoGrid({
+          dataSource: dataSource,
+          pageable: false,
+          columns: [
+            { field: "Name", title: "Name" },
+            { field: "Age", title: "Age" },
+          ],
+          height: 400,
+        });
+
+        $("#pager").kendoPager({
+          dataSource: dataSource,
+          pageSizes: [5, 10, 20],
+          messages: {
+            display: "{0} - {1} of {2} items",
+            empty: "No items to display",
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
+<!-- kendoPager: Sayfalandırma işlevselliği sağlar; grid veya liste bileşenlerinde kullanılır. -->
+

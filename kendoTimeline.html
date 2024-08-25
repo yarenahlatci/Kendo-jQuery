@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="timeline"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#timeline").kendoTimeline({
+          dataSource: [
+            { date: new Date(), title: "Olay 1", description: "Açıklama 1" },
+            {
+              date: new Date(new Date().setDate(new Date().getDate() + 1)),
+              title: "Olay 2",
+              description: "Açıklama 2",
+            },
+            {
+              date: new Date(new Date().setDate(new Date().getDate() + 2)),
+              title: "Olay 3",
+              description: "Açıklama 3",
+            },
+          ],
+          dateField: "date",
+          titleField: "title",
+          descriptionField: "description",
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+
+kendoTimeline: Kronolojik sırada olayları veya etkinlikleri göstermek için kullanılır.
+
+-->

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="treeview"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#treeview").kendoTreeView({
+          dataSource: [
+            { text: "Fruits", items: [{ text: "Apple" }, { text: "Banana" }] },
+            {
+              text: "Vegetables",
+              items: [{ text: "Carrot" }, { text: "Lettuce" }],
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoTreeView: Hiyerarşik veri yapıları için ağaç görünümleri oluşturur, veri yapısını dallara ayırarak gösterir.
+-->

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <label for="numerictextbox">Miktar:</label>
+    <input id="numerictextbox" />
+
+    <script>
+      $(document).ready(function () {
+        $("#numerictextbox").kendoNumericTextBox({
+          min: 0,
+          max: 1000, //0 ile 1000 arasında sayısal değerler girmeye izin verir.
+          format: "n0", // Tam sayı formatı
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--kendoNumericTextBox: Sayısal girişler için kullanılan, minimum ve maksimum değerlerle sınırlandırılabilen bir giriş kutusu sunar.-->

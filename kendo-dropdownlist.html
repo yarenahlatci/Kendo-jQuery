@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <select id="dropdownlist"></select>
+
+    <script>
+      $(document).ready(function () {
+        $("#dropdownlist").kendoDropDownList({
+          dataSource: ["Almanya", "Fransa", "İtalya", "İspanya"],
+          optionLabel: "Bir ülke seçiniz...",
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoDropDownList: Açılır liste oluşturur, kullanıcılara bir seçim yapma imkanı verir.
+Yapı: kendoDropDownList fonksiyonu ile liste öğeleri ve varsayılan seçenek ayarlanır.
+
+-->

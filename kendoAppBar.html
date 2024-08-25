@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="appbar"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#appbar").kendoAppBar({
+          items: [
+            {
+              type: "spacer",
+            },
+            {
+              type: "contentItem",
+              template: "<h3 style='margin: 0;'>Logo</h3>",
+            },
+            {
+              type: "spacer",
+            },
+            {
+              type: "contentItem",
+              template: "<button class='k-button'>Button 1</button>",
+            },
+            {
+              type: "contentItem",
+              template: "<button class='k-button'>Button 2</button>",
+            },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoAppBar: Üst bilgi veya alt bilgi olarak kullanılabilen bir uygulama çubuğu bileşeni sunar.
+
+-->

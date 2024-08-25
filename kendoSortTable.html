@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+    <style>
+      #sortableList li {
+        padding: 10px;
+        border: 1px solid #940808;
+        background-color: bisque;
+        margin-bottom: 5px;
+        cursor: move;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="sortableList">
+      <li>Öğe 1</li>
+      <li>Öğe 2</li>
+      <li>Öğe 3</li>
+      <li>Öğe 4</li>
+    </ul>
+    <script>
+      $(document).ready(function () {
+        $("#sortableList").kendoSortable({
+          placeholder: "<div class='placeholder'></div>",
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoSortable: Listeleri veya grid öğelerini sürükle-bırak ile sıralamaya olanak tanır.
+-->

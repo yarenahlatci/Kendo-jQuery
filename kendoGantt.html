@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="gantt"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#gantt").kendoGantt({
+          dataSource: [
+            {
+              id: 1,
+              text: "Proje Başlangıcı",
+              start: new Date(),
+              end: new Date(new Date().setDate(new Date().getDate() + 10)),
+            },
+            {
+              id: 2,
+              text: "Araştırma",
+              start: new Date(),
+              end: new Date(new Date().setDate(new Date().getDate() + 20)),
+            },
+          ],
+          columns: [
+            { field: "text", title: "Görev", width: 250 },
+            { field: "start", title: "Başlangıç", format: "{0:yyyy-MM-dd}" },
+            { field: "end", title: "Bitiş", format: "{0:yyyy-MM-dd}" },
+          ],
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoGantt: Proje yönetimi ve zamanlama işlevleri için bir Gantt şeması bileşeni sağlar.
+-->

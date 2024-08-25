@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+<style>
+    .photo1 {
+            background-image: url("https://p4.wallpaperbetter.com/wallpaper/434/1001/99/flowers-5k-art-spring-wallpaper-preview.jpg");
+            display: inline-block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+
+        .photo2 {
+            background-image: url("https://img.lovepik.com/bg/20231221/How-Vibrant-Blooms-Boost-Your-Mood-Uncovering-the-Power-of_2668083_wh860.jpg!/fw/860");
+            display: inline-block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+        }
+
+        .photo3 {
+            background-image: url("https://cdn.pixabay.com/photo/2023/07/02/19/58/chamomile-8102907_960_720.jpg");
+            display: inline-block;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+
+        }
+</style>
+  </head>
+  <body>
+    <div id="example">
+        <div style="margin:auto; width:70%">
+            <div id="scrollView" style="width: 1022px; height: 515px; max-width: 100%;">
+                <div class="photo photo1" data-role="page">
+                </div><div class="photo photo2" data-role="page">
+                </div><div class="photo photo3" data-role="page">
+                    </div>
+            </div>
+        </div>
+    <script>
+         $(document).ready(function() {
+            $("#scrollView").kendoScrollView({
+                enablePager: true,
+                contentHeight: "100%"
+            });
+        });
+    </script>
+  </body>
+</html>
+<!--
+kendoScrollView: Kaydırılabilir görsel içerikler ve galeriler oluşturmak için kullanılır.
+
+-->

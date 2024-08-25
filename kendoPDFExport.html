@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <button id="exportToPDF">PDF'e Aktar</button>
+    <div id="grid"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#grid").kendoGrid({
+          dataSource: {
+            data: [
+              { Name: "John", Age: 30 },
+              { Name: "Jane", Age: 25 },
+              { Name: "Paul", Age: 35 },
+            ],
+            schema: {
+              model: {
+                fields: {
+                  Name: { type: "string" },
+                  Age: { type: "number" },
+                },
+              },
+            },
+          },
+          columns: [
+            { field: "Name", title: "Name" },
+            { field: "Age", title: "Age" },
+          ],
+          height: 400,
+        });
+
+        $("#exportToPDF").kendoButton({
+          click: function () {
+            var grid = $("#grid").data("kendoGrid");
+            grid.saveAsPDF();
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
+<!-- kendoPDFExport: Sayfa veya verileri PDF formatında dışa aktarma işlevselliği sunar. -->

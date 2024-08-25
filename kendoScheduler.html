@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <link
+      href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css"
+      rel="stylesheet"
+    />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+  </head>
+  <body>
+    <div id="scheduler"></div>
+
+    <script>
+      $(document).ready(function () {
+        $("#scheduler").kendoScheduler({
+          date: new Date(),
+          height: 600,
+          views: ["day", "week", "month"],
+          editable: true,
+          dataSource: new kendo.data.SchedulerDataSource({
+            data: [
+              {
+                id: 1,
+                start: new Date("2024/08/25 10:00"),
+                end: new Date("2024/08/25 12:00"),
+                title: "Toplantı",
+              },
+            ],
+          }),
+          startDate: new Date("2024/08/25"),
+          endDate: new Date("2024/08/26"),
+        });
+      });
+    </script>
+  </body>
+</html>
+<!--
+kendoScheduler: Etkinlik ve takvim yönetimi için kullanılır, zamanlama ve planlama işlevleri sunar.
+-->

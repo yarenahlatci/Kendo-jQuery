@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base href="https://demos.telerik.com/kendo-ui/grid/excel-export">
+    <title></title>
+    <link href="https://kendo.cdn.telerik.com/themes/8.2.1/default/default-main.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://unpkg.com/jszip/dist/jszip.min.js"></script>
+    <script src="https://kendo.cdn.telerik.com/2024.3.806/js/kendo.all.min.js"></script>
+    
+    
+</head>
+<body>
+    <button id="exportToExcel">Excel'e Aktar</button>
+    <div id="grid"></div>
+
+    <script>
+         $(document).ready(function() {
+            $("#grid").kendoGrid({
+                dataSource: {
+                    data: [
+                        { Name: "John", Age: 30 },
+                        { Name: "Jane", Age: 25 },
+                        { Name: "Paul", Age: 35 }
+                    ],
+                    schema: {
+                        model: {
+                            fields: {
+                                Name: { type: "string" },
+                                Age: { type: "number" }
+                            }
+                        }
+                    }
+                },
+                columns: [
+                    { field: "Name", title: "Name" },
+                    { field: "Age", title: "Age" }
+                ],
+                height: 400
+            });
+
+            $("#exportToExcel").kendoButton({
+                click: function() {
+                    var grid = $("#grid").data("kendoGrid");
+                    grid.saveAsExcel();
+                }
+            });
+        });
+    </script>
+</div>
+
+
+
+</body>
+</html>
+<!--
+kendoExcelExport: Verileri Excel formatında dışa aktarma özelliği sağlar.
+
+-->
